@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title> Cinema Reservation System </title>
+    </head>
+
+    <body>
+
+        <div>
+            {% block content %}
+                <strong> Current movies:</strong>
+
+                {% for key, values in movie_projections.items %}
+                    <li>
+                        {{key}}
+                    </li>
+                    {% for value in values %}
+                        <ol>
+                            {{value}}
+                        </ol>
+                    {% endfor %}
+                {% endfor %}
+            {% endblock %}
+        </div>
+
+    </body>
+</html>
+
